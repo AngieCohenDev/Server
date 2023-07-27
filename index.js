@@ -1,15 +1,20 @@
 const express = require("express");
+const hbs = require('hbs');
+
 const app = express();
 
 //Handlebar
 app.set('view engine', 'hbs')
-
+hbs.registerPartials( __dirname + 'views/partials');
 
 //Servir Contenido
 app.use(express.static('public'))
 
 app.get('/', (req, res) =>{
-    res.render('home');
+    res.render('home', {
+        nombre: 'Angie Cohen',
+        titulo: 'Curso de Node'
+    });
 })
 
 /*app.get("/", (req, res) =>{

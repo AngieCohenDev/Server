@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>Road Trip by TEMPLATED</title>
+		<title>{{titulo}}</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -14,19 +14,10 @@
 	<body>
 
 		<!-- Header -->
-			<header id="header">
-				<div class="logo"><a href="index.html">Road Trip <span>by TEMPLATED</span></a></div>
-				<a href="#menu"><span>Menu</span></a>
-			</header>
+			{{> header}}
 
 		<!-- Nav -->
-			<nav id="menu">
-				<ul class="links">
-					<li><a href="/">Home</a></li>
-					<li><a href="/generic">Generic</a></li>
-					<li><a href="/elements">Elements</a></li>
-				</ul>
-			</nav>
+			{{> navbar}}
 
 		<!-- Banner -->
 		<!--
