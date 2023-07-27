@@ -1,14 +1,21 @@
 const express = require("express");
 const app = express();
 
-//Servir Contenido
+//Handlebar
+app.set('view engine', 'hbs')
 
+
+//Servir Contenido
 app.use(express.static('public'))
 
+app.get('/', (req, res) =>{
+    res.render('home');
+})
 
-app.get("/", (req, res) =>{
+/*app.get("/", (req, res) =>{
     res.sendFile(__dirname + '/public/index.html');
 })
+*/
 
 app.get("/generic", (req, res) =>{
     res.sendFile(__dirname + '/public/generic.html');
