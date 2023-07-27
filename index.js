@@ -1,7 +1,9 @@
+require('dotenv').config();
 const express = require("express");
 const hbs = require('hbs');
 
 const app = express();
+const port = process.env.PORT;
 
 //Handlebar
 app.set('view engine', 'hbs')
@@ -34,4 +36,6 @@ app.get("*", (req, res)=>{
     res.send("404 | Error Page Not Found")
 })
 
-app.listen(3000);
+app.listen(port, () =>{
+    console.log(`Example app listening at http://localhost:${port}`);
+});
